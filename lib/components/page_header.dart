@@ -13,7 +13,7 @@ class PageHeader extends StatelessWidget {
       height: context.height / 3.5,
       width: context.width,
       padding: const EdgeInsets.symmetric(horizontal: 24),
-      child: const Column(
+      child:  Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           kVSpace128,

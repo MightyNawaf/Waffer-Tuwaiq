@@ -1,36 +1,31 @@
 name: waffer
 description: A new Flutter project.
-
-publish_to: 'none'
-
-version: 1.0.0+1
+publish_to: "none"
+version: 0.1.0
 
 environment:
-    sdk: '>=3.0.5 <4.0.0'
+  sdk: ">=2.19.2 <3.0.0"
 
 dependencies:
-    flutter:
-        sdk: flutter
-
-    cupertino_icons: ^1.0.2
-    flutter_animate: ^4.2.0+1
-    font_awesome_flutter: ^10.5.0
-    zoom_tap_animation: ^1.1.0
-    rive: ^0.11.14
-    awesome_dialog: ^3.1.0
-    flutter_slidable: ^3.0.0
-    liquid_pull_to_refresh: ^3.0.1
-    shimmer: ^3.0.0
-    glass: ^1.0.1+1
-    flutter_staggered_animations: ^1.1.1
+  awesome_dialog: ^3.1.0
+  flutter:
+    sdk: flutter
+  flutter_animate: ^4.2.0+1
+  flutter_slidable: ^3.0.0
+  flutter_staggered_animations: ^1.1.1
+  intro_slider: ^4.2.0
+  keyboard_actions: ^4.2.0
+  liquid_pull_to_refresh: ^3.0.1
+  rive: ^0.11.4
+  shimmer: ^3.0.0
+  zoom_tap_animation: ^1.1.0
 
 dev_dependencies:
-    flutter_test:
-        sdk: flutter
-
-    flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
 
 flutter:
-    uses-material-design: true
-    assets:
-    - assets/rive/
+  uses-material-design: true
+  assets:
+    - assets/images/

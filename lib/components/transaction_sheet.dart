@@ -4,6 +4,7 @@ import 'package:rive/rive.dart';
 import 'package:waffer/constants/spacings.dart';
 import 'package:waffer/globals/data.dart';
 import 'package:waffer/utils/extensions.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class AddTransactionSheet extends StatefulWidget {
   const AddTransactionSheet({super.key});
@@ -32,17 +33,35 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
       padding: const EdgeInsets.all(24),
       child: Column(
         children: [
-          const Text(
-            'Add Transaction',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          AnimatedTextKit(
+            animatedTexts: [
+              TypewriterAnimatedText(
+                'Add Transaction',
+                textStyle: const TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
+                speed: const Duration(milliseconds: 300),
+              ),
+            ],
+            totalRepeatCount: 1,
+            pause: const Duration(milliseconds: 300),
+            displayFullTextOnTap: true,
+            stopPauseOnTap: true,
           ),
+          // const Text(
+          //   'Add Transaction',
+          //   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          // ),
           kVSpace24,
 
           // Title textfield
           TextField(
             controller: titleController,
-            decoration:
-                const InputDecoration(border: OutlineInputBorder(), hintText: 'i.e: Car Wash', label: Text('Title')),
+            decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'i.e: Car Wash',
+                label: Text('Title')),
           ),
 
           kVSpace8,
@@ -51,8 +70,10 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
           TextField(
             controller: amountController,
             keyboardType: TextInputType.number,
-            decoration:
-                const InputDecoration(border: OutlineInputBorder(), hintText: 'i.e: 1000', label: Text('Amount')),
+            decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'i.e: 1000',
+                label: Text('Amount')),
           ),
           kVSpace16,
 
@@ -83,7 +104,8 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
           // Submit button
           ElevatedButton(
             onPressed: () async {
-              if (amountController.text.isEmpty || titleController.text.isEmpty) {
+              if (amountController.text.isEmpty ||
+                  titleController.text.isEmpty) {
                 AwesomeDialog(
                   context: context,
                   dialogType: DialogType.error,
@@ -110,7 +132,8 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
                   builder: (context) {
                     return Container(
                       margin: const EdgeInsets.all(24),
-                      child: const RiveAnimation.asset('assets/rive/success.riv'),
+                      child:
+                          const RiveAnimation.asset('assets/rive/success.riv'),
                     );
                   },
                 );

@@ -1,16 +1,7 @@
 # waffer
 
-A new Flutter project.
+## What is the new
+adding animation to the card to make it invisible 
 
-## Getting Started
+![animation](https://github.com/Alawashez2/Waffer-Tuwaiq/assets/94991478/1cebbd1d-6001-40db-96dd-8376fa5f34d5)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

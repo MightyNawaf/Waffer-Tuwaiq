@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:odometer/odometer.dart';
 import 'package:waffer/components/transaction_sheet.dart';
 import 'package:waffer/constants/colors.dart';
 import 'package:waffer/constants/spacings.dart';
@@ -55,20 +56,39 @@ class _BudgetCardState extends State<BudgetCard> {
                     kVSpace8,
                     Row(
                       children: [
-                        Text(
-                          '\$${Data.balance}',
-                          style: const TextStyle(
+                        //Mjd changes start here
+                        const Text(
+                          '\$',
+                          style: TextStyle(
                             fontSize: 40,
                             fontWeight: FontWeight.w600,
                           ),
-                        ).shimmered,
+                        ),
+
+                        AnimatedSlideOdometerNumber(
+                          odometerNumber: OdometerNumber(Data.balance.round()),
+                          duration: const Duration(milliseconds: 2000),
+                          letterWidth: 20,
+                          numberTextStyle: const TextStyle(
+                            fontSize: 40,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        // Text(
+                        //   '\$${Data.balance}',
+                        //   style: const TextStyle(
+                        //     fontSize: 40,
+                        //     fontWeight: FontWeight.w600,
+                        //   ),
+                        // ).shimmered,
                         kHSpace8,
                         const Icon(
                           Icons.remove_red_eye,
                           color: WColors.grey,
                         )
                       ],
-                    ),
+                    ).shimmered,
+                    //Mjd changes end here
                     kVSpace16,
                     Text(
                       getLastTransaction,

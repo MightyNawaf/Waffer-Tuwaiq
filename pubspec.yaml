@@ -23,6 +23,7 @@ dependencies:
     shimmer: ^3.0.0
     glass: ^1.0.1+1
     flutter_staggered_animations: ^1.1.1
+    syncfusion_flutter_datepicker: ^22.2.8
 
 dev_dependencies:
     flutter_test:

@@ -59,9 +59,9 @@ class TransactionCard extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
-                      const Text(
-                        '\$700 left',
-                        style: TextStyle(
+                      Text(
+                        '\$700 left, ${transaction.date.year}-${transaction.date.month}-${transaction.date.day}', // added the year, month and the day from the date
+                        style: const TextStyle(
                           fontSize: 12,
                           color: WColors.grey,
                         ),
@@ -74,7 +74,9 @@ class TransactionCard extends StatelessWidget {
                     Text(
                       '\$${transaction.amount}',
                       style: TextStyle(
-                        color: transaction.type == TransactionType.income ? WColors.blue : WColors.red,
+                        color: transaction.type == TransactionType.income
+                            ? WColors.blue
+                            : WColors.red,
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
                       ),

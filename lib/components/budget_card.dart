@@ -85,8 +85,12 @@ class _BudgetCardState extends State<BudgetCard> {
                       HapticFeedback.mediumImpact();
                       await showModalBottomSheet(
                         context: context,
+                        isScrollControlled: true,
                         builder: (context) {
-                          return const AddTransactionSheet();
+                          return SizedBox(
+                              height: context.height /
+                                  1.4, // change the height of the container to see the calendar
+                              child: const AddTransactionSheet());
                         },
                       );
                       //   context.findAncestorStateOfType<MyHomePageState>()?.setState(() {});

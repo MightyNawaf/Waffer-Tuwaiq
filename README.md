@@ -15,7 +15,7 @@ A new Flutter project.
   <br>![outcome](https://github.com/Mjd-Gh/Waffer-Tuwaiq/assets/101333803/347c2f4a-4ae8-4047-b596-3ea0ac4c50dc)
 
 ## Problem with using Odmeter package
-- Odometer doesn't accept double number "only integers", that why I use rounding mehtod
+- Odometer doesn't accept double number "only integers", that why I use rounding method
 - When the number of digits increased, then decreased the extra digits will not removed, to make it clear see the showcase below
   - Extra digit problem<br>
   <br>![proble case](https://github.com/Mjd-Gh/Waffer-Tuwaiq/assets/101333803/48f95bcf-acf1-473f-b3d6-21804b1718c9)

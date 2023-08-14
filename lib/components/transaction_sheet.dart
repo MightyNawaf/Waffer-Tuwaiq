@@ -1,8 +1,8 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:rive/rive.dart';
 import 'package:waffer/constants/spacings.dart';
 import 'package:waffer/globals/data.dart';
+import 'package:waffer/keyboard_action.dart';
 import 'package:waffer/utils/extensions.dart';
 
 class AddTransactionSheet extends StatefulWidget {
@@ -39,10 +39,12 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
           kVSpace24,
 
           // Title textfield
-          TextField(
+           TextField(
             controller: titleController,
-            decoration:
-                const InputDecoration(border: OutlineInputBorder(), hintText: 'i.e: Car Wash', label: Text('Title')),
+            decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'i.e: Car Wash',
+                label: Text('Title')),
           ),
 
           kVSpace8,
@@ -51,9 +53,12 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
           TextField(
             controller: amountController,
             keyboardType: TextInputType.number,
-            decoration:
-                const InputDecoration(border: OutlineInputBorder(), hintText: 'i.e: 1000', label: Text('Amount')),
+            decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'i.e: 1000',
+                label: Text('Amount')),
           ),
+          const Content(),
           kVSpace16,
 
           Row(
@@ -83,7 +88,8 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
           // Submit button
           ElevatedButton(
             onPressed: () async {
-              if (amountController.text.isEmpty || titleController.text.isEmpty) {
+              if (amountController.text.isEmpty ||
+                  titleController.text.isEmpty) {
                 AwesomeDialog(
                   context: context,
                   dialogType: DialogType.error,
@@ -105,15 +111,6 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
                 } else {
                   Data.balance -= double.tryParse(amountController.text) ?? 0;
                 }
-                showDialog(
-                  context: context,
-                  builder: (context) {
-                    return Container(
-                      margin: const EdgeInsets.all(24),
-                      child: const RiveAnimation.asset('assets/rive/success.riv'),
-                    );
-                  },
-                );
 
                 Future.delayed(const Duration(seconds: 2), () {
                   Navigator.pop(context);

@@ -1,16 +1,13 @@
 # waffer
 
-A new Flutter project.
+## By using draw_graph I added graph to budget card
 
-## Getting Started
+I used LineGraph widget from draw_graph package it's takes two list one for income transactions and another is outcome transactions through "features" attribut as shown in graph_widget.dart file.
 
-This project is a starting point for a Flutter application.
+## Final result:
 
-A few resources to get you started if this is your first Flutter project:
+<img src="https://github.com/Lama-Aldhafeeri/Waffer-Tuwaiq/assets/84765301/0f922e11-9a3a-435a-a9fe-4a5c2fcbab3b"  height = "500" />
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+After clicking on the card the graph appear:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="https://github.com/Lama-Aldhafeeri/Waffer-Tuwaiq/assets/84765301/74d9c893-d678-4bca-9f1a-980ea2159b0d"  height = "500" />

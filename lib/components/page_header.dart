@@ -16,7 +16,7 @@ class PageHeader extends StatelessWidget {
       child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          WSpacing.kVSpace128,
+          kVSpace128,
           Text(
             'Budgets',
             style: TextStyle(

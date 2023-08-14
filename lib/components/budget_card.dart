@@ -7,6 +7,7 @@ import 'package:waffer/constants/spacings.dart';
 import 'package:waffer/globals/data.dart';
 import 'package:waffer/pages/home.dart';
 import 'package:waffer/utils/extensions.dart';
+import 'package:waffer/utils/helpers.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class BudgetCard extends StatefulWidget {
@@ -43,29 +44,37 @@ class _BudgetCardState extends State<BudgetCard> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Column(
+                Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       'Total',
                       style: TextStyle(fontWeight: FontWeight.w600),
                     ),
-                    WSpacing.kVSpace8,
-                    Text(
-                      '\$1,294,398',
-                      style: TextStyle(
-                        fontSize: 40,
-                        fontWeight: FontWeight.w600,
-                        color: WColors.blue,
-                      ),
+                    kVSpace8,
+                    Row(
+                      children: [
+                        Text(
+                          '\$${Data.balance}',
+                          style: const TextStyle(
+                            fontSize: 40,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ).shimmered,
+                        kHSpace8,
+                        const Icon(
+                          Icons.remove_red_eye,
+                          color: WColors.grey,
+                        )
+                      ],
                     ),
-                    WSpacing.kVSpace16,
+                    kVSpace16,
                     Text(
-                      '- \$70,000 today',
+                      getLastTransaction,
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        color: WColors.red,
+                        color: getLastTransactionColor,
                       ),
                     ),
                   ],

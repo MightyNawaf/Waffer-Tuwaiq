@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
 import 'package:waffer/components/budget_card.dart';
 import 'package:waffer/components/page_header.dart';
 import 'package:waffer/components/scaffold.dart';
 import 'package:waffer/components/transaction_card.dart';
+import 'package:waffer/constants/colors.dart';
 import 'package:waffer/globals/data.dart';
 import 'package:waffer/utils/extensions.dart';
 
@@ -42,14 +45,36 @@ class MyHomePageState extends State<MyHomePage> {
             ],
           ),
           Expanded(
-            child: ListView(
-              shrinkWrap: true,
-              children: [
-                for (final transaction in Data.transactions)
-                  TransactionCard(
-                    transaction: transaction,
-                  ),
-              ],
+            child: LiquidPullToRefresh(
+              color: WColors.blue,
+              animSpeedFactor: 10,
+              showChildOpacityTransition: false,
+              springAnimationDurationInMilliseconds: 500,
+              onRefresh: () {
+                return Future.delayed(const Duration(milliseconds: 500), () {
+                  setState(() {});
+                });
+              },
+              child: AnimationLimiter(
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: Data.transactions.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return AnimationConfiguration.staggeredList(
+                      position: index,
+                      duration: const Duration(milliseconds: 375),
+                      child: FlipAnimation(
+                        // verticalOffset: 50.0,
+                        child: FadeInAnimation(
+                          child: TransactionCard(
+                            transaction: Data.transactions[index],
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
             ),
           )
         ],

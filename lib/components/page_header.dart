@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:waffer/constants/colors.dart';
 import 'package:waffer/constants/spacings.dart';
 import 'package:waffer/utils/extensions.dart';
-
+import 'package:text_scroll/text_scroll.dart';
 class PageHeader extends StatelessWidget {
   const PageHeader({super.key});
 
@@ -17,7 +17,8 @@ class PageHeader extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           kVSpace128,
-          Text(
+          
+           TextScroll(
             'Budgets',
             style: TextStyle(
               color: WColors.white,

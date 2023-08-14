@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## Getting Started
 
-by using library  I was able to do animations on the transaction card and icon in card..
+by using library ```animate_do.dart``` I was able to do animations on the transaction card and icon in card..
 
  I used   ``` FadeInUp() ``` on container.
  

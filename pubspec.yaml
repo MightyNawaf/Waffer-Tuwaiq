@@ -23,6 +23,7 @@ dependencies:
     shimmer: ^3.0.0
     glass: ^1.0.1+1
     flutter_staggered_animations: ^1.1.1
+    text_scroll: ^0.2.0
 
 dev_dependencies:
     flutter_test:

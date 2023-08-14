@@ -19,7 +19,8 @@ class MyHomePage extends StatefulWidget {
 class MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    final stackHeight = Data.isExpanded ? context.height / 1.77 : context.height / 2.5;
+    final stackHeight =
+        Data.isExpanded ? context.height / 1.77 : context.height / 2.5;
 
     return WScaffold(
       top: false,
@@ -76,7 +77,8 @@ class MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-          )
+          ),
+          
         ],
       ),
     );

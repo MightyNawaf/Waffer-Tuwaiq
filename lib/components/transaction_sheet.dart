@@ -41,8 +41,10 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
           // Title textfield
           TextField(
             controller: titleController,
-            decoration:
-                const InputDecoration(border: OutlineInputBorder(), hintText: 'i.e: Car Wash', label: Text('Title')),
+            decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'i.e: Car Wash',
+                label: Text('Title')),
           ),
 
           kVSpace8,
@@ -51,8 +53,10 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
           TextField(
             controller: amountController,
             keyboardType: TextInputType.number,
-            decoration:
-                const InputDecoration(border: OutlineInputBorder(), hintText: 'i.e: 1000', label: Text('Amount')),
+            decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'i.e: 1000',
+                label: Text('Amount')),
           ),
           kVSpace16,
 
@@ -83,7 +87,8 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
           // Submit button
           ElevatedButton(
             onPressed: () async {
-              if (amountController.text.isEmpty || titleController.text.isEmpty) {
+              if (amountController.text.isEmpty ||
+                  titleController.text.isEmpty) {
                 AwesomeDialog(
                   context: context,
                   dialogType: DialogType.error,
@@ -110,7 +115,8 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
                   builder: (context) {
                     return Container(
                       margin: const EdgeInsets.all(24),
-                      child: const RiveAnimation.asset('assets/rive/success.riv'),
+                      child:
+                          const RiveAnimation.asset('assets/rive/success.riv'),
                     );
                   },
                 );

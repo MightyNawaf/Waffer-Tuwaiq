@@ -4,13 +4,22 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+by using library  I was able to do animations on the transaction card and icon in card..
 
-A few resources to get you started if this is your first Flutter project:
+ I used   ``` FadeInUp() ``` on container.
+ 
+![Screenshot 2023-08-15 021447](https://github.com/Asma-Alkathiri/Waffer-Tuwaiq/assets/103123133/67128548-c1c6-45cb-a6e3-2b219e97bf20)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+ and used ``` FadeInLeft() ``` on Icon.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ ![Screenshot 2023-08-15 021533](https://github.com/Asma-Alkathiri/Waffer-Tuwaiq/assets/103123133/f674dffb-5cfb-4eb2-97cc-62d13870bf49)
+
+
+
+
+https://github.com/Asma-Alkathiri/Waffer-Tuwaiq/assets/103123133/b02bfff7-06be-4e7e-b8ce-917cf351a07f
+
+
+
+ 
+

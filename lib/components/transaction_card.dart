@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:waffer/constants/colors.dart';
-import 'package:waffer/globals/data.dart';
+import 'package:flutter_waffer/constants/colors.dart';
+import 'package:flutter_waffer/globals/data.dart';
 
 class TransactionCard extends StatelessWidget {
   const TransactionCard({super.key, required this.transaction});

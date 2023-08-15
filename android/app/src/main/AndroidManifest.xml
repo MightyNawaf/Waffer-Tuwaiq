@@ -1,6 +1,7 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <application
-        android:label="waffer"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.flutter_waffer">
+   <application
+        android:label="flutter_waffer"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

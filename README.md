@@ -1,4 +1,4 @@
-# waffer
+# flutter_waffer
 
 A new Flutter project.
 

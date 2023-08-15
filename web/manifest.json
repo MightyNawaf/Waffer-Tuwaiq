@@ -1,6 +1,6 @@
 {
-    "name": "waffer",
-    "short_name": "waffer",
+    "name": "flutter_waffer",
+    "short_name": "flutter_waffer",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

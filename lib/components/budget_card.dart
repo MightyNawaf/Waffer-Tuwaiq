@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:waffer/components/transaction_sheet.dart';
-import 'package:waffer/constants/colors.dart';
-import 'package:waffer/constants/spacings.dart';
-import 'package:waffer/globals/data.dart';
-import 'package:waffer/pages/home.dart';
-import 'package:waffer/utils/extensions.dart';
-import 'package:waffer/utils/helpers.dart';
+import 'package:flutter_waffer/components/transaction_sheet.dart';
+import 'package:flutter_waffer/constants/colors.dart';
+import 'package:flutter_waffer/constants/spacings.dart';
+import 'package:flutter_waffer/globals/data.dart';
+import 'package:flutter_waffer/pages/home.dart';
+import 'package:flutter_waffer/utils/extensions.dart';
+import 'package:flutter_waffer/utils/helpers.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class BudgetCard extends StatefulWidget {

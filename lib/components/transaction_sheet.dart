@@ -1,9 +1,11 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:elegant_notification/elegant_notification.dart';
+import 'package:elegant_notification/resources/arrays.dart';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
-import 'package:waffer/constants/spacings.dart';
-import 'package:waffer/globals/data.dart';
-import 'package:waffer/utils/extensions.dart';
+import 'package:flutter_waffer/constants/spacings.dart';
+import 'package:flutter_waffer/globals/data.dart';
+import 'package:flutter_waffer/utils/extensions.dart';
 
 class AddTransactionSheet extends StatefulWidget {
   const AddTransactionSheet({super.key});
@@ -41,8 +43,10 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
           // Title textfield
           TextField(
             controller: titleController,
-            decoration:
-                const InputDecoration(border: OutlineInputBorder(), hintText: 'i.e: Car Wash', label: Text('Title')),
+            decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'i.e: Car Wash',
+                label: Text('Title')),
           ),
 
           kVSpace8,
@@ -51,8 +55,10 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
           TextField(
             controller: amountController,
             keyboardType: TextInputType.number,
-            decoration:
-                const InputDecoration(border: OutlineInputBorder(), hintText: 'i.e: 1000', label: Text('Amount')),
+            decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'i.e: 1000',
+                label: Text('Amount')),
           ),
           kVSpace16,
 
@@ -83,14 +89,24 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
           // Submit button
           ElevatedButton(
             onPressed: () async {
-              if (amountController.text.isEmpty || titleController.text.isEmpty) {
-                AwesomeDialog(
-                  context: context,
-                  dialogType: DialogType.error,
-                  animType: AnimType.rightSlide,
-                  title: 'Warning',
-                  desc: 'Please complete all fields',
-                ).show();
+              if (amountController.text.isEmpty ||
+                  titleController.text.isEmpty) {
+                ElegantNotification.error(
+                  width: 360,
+                  notificationPosition: NotificationPosition.center,
+                  animation: AnimationType.fromTop,
+                  title: const Text('Error'),
+                  description:
+                      const Text('Please don\'t leave any empty field'),
+                  onDismiss: () {},
+                ).show(context);
+                // AwesomeDialog(
+                //   context: context,
+                //   dialogType: DialogType.error,
+                //   animType: AnimType.rightSlide,
+                //   title: 'Warning',
+                //   desc: 'Please complete all fields',
+                // ).show();
               } else {
                 Data.transactions.add(
                   Transaction(
@@ -105,20 +121,28 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
                 } else {
                   Data.balance -= double.tryParse(amountController.text) ?? 0;
                 }
-                showDialog(
-                  context: context,
-                  builder: (context) {
-                    return Container(
-                      margin: const EdgeInsets.all(24),
-                      child: const RiveAnimation.asset('assets/rive/success.riv'),
-                    );
-                  },
-                );
+                ElegantNotification.success(
+                  width: 360,
+                  notificationPosition: NotificationPosition.center,
+                  animation: AnimationType.fromTop,
+                  title: const Text('Add Entry'),
+                  description: const Text('Your entry has been added'),
+                  onDismiss: () {},
+                ).show(context);
+                // showDialog(
+                //   context: context,
+                //   builder: (context) {
+                //     return Container(
+                //       margin: const EdgeInsets.all(24),
+                //       child: const RiveAnimation.asset('assets/rive/success.riv'),
+                //     );
+                //   },
+                // );
 
-                Future.delayed(const Duration(seconds: 2), () {
-                  Navigator.pop(context);
-                  Navigator.pop(context);
-                });
+                // Future.delayed(const Duration(seconds: 2), () {
+                //   Navigator.pop(context);
+                //   Navigator.pop(context);
+                // });
               }
             },
             child: const Text('Submit'),

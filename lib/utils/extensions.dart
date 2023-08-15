@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:waffer/constants/colors.dart';
+import 'package:flutter_waffer/constants/colors.dart';
 
 extension ScreenSizes on BuildContext {
   double get height => MediaQuery.of(this).size.height;

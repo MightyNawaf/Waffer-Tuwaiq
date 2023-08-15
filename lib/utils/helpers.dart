@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:waffer/constants/colors.dart';
-import 'package:waffer/globals/data.dart';
+import 'package:flutter_waffer/constants/colors.dart';
+import 'package:flutter_waffer/globals/data.dart';
 
 String get getLastTransaction {
   if (Data.transactions.isEmpty) return '';

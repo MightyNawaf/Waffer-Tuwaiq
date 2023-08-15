@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
-import 'package:waffer/components/budget_card.dart';
-import 'package:waffer/components/page_header.dart';
-import 'package:waffer/components/scaffold.dart';
-import 'package:waffer/components/transaction_card.dart';
-import 'package:waffer/constants/colors.dart';
-import 'package:waffer/globals/data.dart';
-import 'package:waffer/utils/extensions.dart';
+import 'package:flutter_waffer/components/budget_card.dart';
+import 'package:flutter_waffer/components/page_header.dart';
+import 'package:flutter_waffer/components/scaffold.dart';
+import 'package:flutter_waffer/components/transaction_card.dart';
+import 'package:flutter_waffer/constants/colors.dart';
+import 'package:flutter_waffer/globals/data.dart';
+import 'package:flutter_waffer/utils/extensions.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});

@@ -7,16 +7,17 @@ import 'package:waffer/components/scaffold.dart';
 import 'package:waffer/components/transaction_card.dart';
 import 'package:waffer/constants/colors.dart';
 import 'package:waffer/globals/data.dart';
+import 'package:waffer/pages/settings_page.dart';
 import 'package:waffer/utils/extensions.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<MyHomePage> createState() => MyHomePageState();
+  State<HomePage> createState() => HomePageState();
 }
 
-class MyHomePageState extends State<MyHomePage> {
+class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final stackHeight = Data.isExpanded ? context.height / 1.77 : context.height / 2.5;
@@ -24,6 +25,23 @@ class MyHomePageState extends State<MyHomePage> {
     return WScaffold(
       top: false,
       bottom: false,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: WColors.blue,
+        actions: [
+          InkWell(
+            onTap: () {
+              const SettingsPage().show(context);
+            },
+            child: const Padding(
+              padding: EdgeInsets.all(24),
+              child: Icon(
+                Icons.settings,
+              ),
+            ),
+          )
+        ],
+      ),
       child: Column(
         children: [
           Stack(

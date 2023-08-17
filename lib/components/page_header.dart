@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:waffer/constants/colors.dart';
-import 'package:waffer/constants/spacings.dart';
 import 'package:waffer/utils/extensions.dart';
 
 class PageHeader extends StatelessWidget {
@@ -16,7 +15,6 @@ class PageHeader extends StatelessWidget {
       child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          kVSpace128,
           Text(
             'Budgets',
             style: TextStyle(

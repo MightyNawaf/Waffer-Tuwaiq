@@ -5,7 +5,7 @@ import 'package:waffer/components/transaction_sheet.dart';
 import 'package:waffer/constants/colors.dart';
 import 'package:waffer/constants/spacings.dart';
 import 'package:waffer/globals/data.dart';
-import 'package:waffer/pages/home.dart';
+import 'package:waffer/pages/home_page.dart';
 import 'package:waffer/utils/extensions.dart';
 import 'package:waffer/utils/helpers.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
@@ -29,7 +29,7 @@ class _BudgetCardState extends State<BudgetCard> {
         Data.isExpanded = !Data.isExpanded;
 
         setState(() {});
-        context.findAncestorStateOfType<MyHomePageState>()?.setState(() {});
+        context.findAncestorStateOfType<HomePageState>()?.setState(() {});
       },
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 100),

@@ -26,3 +26,14 @@ extension BlurThisWidget on Widget {
         child: this,
       );
 }
+
+extension Navigation on Widget {
+  show(BuildContext context) => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return this;
+          },
+        ),
+      );
+}
